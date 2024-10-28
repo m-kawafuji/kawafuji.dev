@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { Rasa, Wendy_One } from 'next/font/google';
+import clsx from 'clsx';
 import 'minireset.css';
 import '@/styles/index.scss';
 
@@ -7,6 +9,17 @@ export const metadata: Metadata = {
   description: "Masashi Kawafuji's blog",
 };
 
+const rasa = Rasa({
+  subsets: ['latin'],
+  variable: '--font-family-serif',
+});
+
+const wendyOne = Wendy_One({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-family-display',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -14,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={clsx(rasa.variable, wendyOne.variable)}>{children}</body>
     </html>
   );
 }
