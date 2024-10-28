@@ -1,0 +1,24 @@
+.inner {
+  padding-block: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.socialLinkWrapper {
+  width: 2rem;
+}
+
+.socialLink {
+  display: block;
+
+  @media (any-hover: hover) {
+    transition: opacity 0.12s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
