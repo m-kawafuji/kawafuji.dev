@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import 'minireset.css';
+import '@/styles/index.scss';
 
 export const metadata: Metadata = {
   title: 'Masashi Kawafuji',
