@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Rasa, Wendy_One } from 'next/font/google';
 import clsx from 'clsx';
+import Header from '@/components/Header';
 import 'minireset.css';
 import '@/styles/index.scss';
 
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(rasa.variable, wendyOne.variable)}>{children}</body>
+      <body className={clsx(rasa.variable, wendyOne.variable)}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
