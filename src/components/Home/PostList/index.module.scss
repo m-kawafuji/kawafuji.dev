@@ -1,0 +1,25 @@
+.list {
+  > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.link {
+  color: var(--color-text-neutral-primary);
+  text-decoration: none;
+
+  @media (any-hover: hover) {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.date {
+  line-height: 1;
+}
