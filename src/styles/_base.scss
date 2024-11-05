@@ -14,3 +14,8 @@ body {
 img {
   vertical-align: middle;
 }
+
+code,
+pre {
+  font-family: var(--font-family-monospaced);
+}

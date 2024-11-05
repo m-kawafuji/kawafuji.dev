@@ -1,0 +1,50 @@
+.container {
+  h2 {
+    border-left: 0.125em solid var(--color-border-brand-primary);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 2rem;
+    padding-left: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 2rem;
+  }
+
+  p {
+    margin-block: 1rem;
+
+    code {
+      background-color: var(--color-background-neutral-tertiary);
+      border-radius: 0.4em;
+      padding: 0.2em 0.4em;
+    }
+  }
+
+  a {
+    color: var(--color-text-brand-primary);
+
+    @media (any-hover: hover) {
+      transition: filter 0.12s ease-out;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+  }
+
+  :is(code, pre) {
+    font-size: 0.8rem;
+  }
+
+  pre {
+    border-radius: 0.5rem;
+    margin-block: 1rem;
+    overflow: scroll;
+    padding: 1rem;
+  }
+}
