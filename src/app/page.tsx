@@ -7,8 +7,8 @@ import styles from './page.module.scss';
 export default function Home() {
   return (
     <main>
+      <Jumbotron />
       <Container>
-        <Jumbotron />
         <div className={styles.sections}>
           <Section title="Blog">
             <PostList />

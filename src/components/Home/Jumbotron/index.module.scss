@@ -1,7 +1,9 @@
 .container {
   background-color: var(--color-background-neutral-secondary);
-  border-radius: 1rem;
-  padding: 2.5rem 2rem;
+}
+
+.inner {
+  padding-block: 2.5rem;
 }
 
 .title {
@@ -12,5 +14,5 @@
 }
 
 .description {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
