@@ -3,6 +3,7 @@ import { Rasa, Wendy_One } from 'next/font/google';
 import clsx from 'clsx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import styles from './layout.module.scss';
 import 'minireset.css';
 import '@/styles/index.scss';
 
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(rasa.variable, wendyOne.variable)}>
+      <body className={clsx(styles.layout, rasa.variable, wendyOne.variable)}>
         <Header />
         {children}
         <Footer />
