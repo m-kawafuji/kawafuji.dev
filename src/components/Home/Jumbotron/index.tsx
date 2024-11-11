@@ -12,7 +12,8 @@ export default function Jumbotron() {
             Masashi Kawafuji&apos;s Blog
           </h1>
           <p className={styles.description}>
-            This is my personal blog where I write about web front-end stuff.
+            This is my personal blog where I mainly write about web front-end
+            stuff.
           </p>
         </section>
       </Container>
