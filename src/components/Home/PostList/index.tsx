@@ -4,17 +4,11 @@ import { compareDesc, format } from 'date-fns';
 import { getPost } from '@/lib/blog';
 import styles from './index.module.scss';
 
-async function getPosts() {
+export default async function PostList() {
   const files = await fg('src/content/blog/*.md');
   const posts = await Promise.all(files.map(getPost));
-  const sortedPosts = posts.toSorted((a, b) =>
-    compareDesc(a.metadata.date, b.metadata.date),
-  );
-  return sortedPosts;
-}
 
-export default async function PostList() {
-  const posts = await getPosts();
+  posts.sort((a, b) => compareDesc(a.metadata.date, b.metadata.date));
 
   return (
     <div className={styles.list}>
