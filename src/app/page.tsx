@@ -10,7 +10,7 @@ export default function Home() {
       <Jumbotron />
       <Container>
         <div className={styles.sections}>
-          <Section title="Blog">
+          <Section title="Posts">
             <PostList />
           </Section>
         </div>
