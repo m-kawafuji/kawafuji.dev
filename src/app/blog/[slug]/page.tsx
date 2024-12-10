@@ -23,7 +23,7 @@ export default async function Blog({
   return (
     <main>
       <Container>
-        <article>
+        <article className={styles.inner}>
           <header className={styles.header}>
             <h1 className={styles.title}>{metadata.title}</h1>
             <p className={styles.date}>
