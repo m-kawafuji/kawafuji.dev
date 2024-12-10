@@ -3,12 +3,16 @@ html {
 }
 
 body {
-  background-color: var(--color-background-neutral-primary);
-  color: var(--color-text-neutral-primary);
-  font-family: var(--font-family-serif);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-sans-seif);
   letter-spacing: 0;
   line-height: 1.5;
   min-height: 100%;
+}
+
+a {
+  color: inherit;
 }
 
 img {
