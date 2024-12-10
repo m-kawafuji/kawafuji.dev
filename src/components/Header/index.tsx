@@ -4,7 +4,7 @@ import styles from './index.module.scss';
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.container}>
       <Container>
         <div className={styles.inner}>
           <Link href="/" className={styles.home}>
