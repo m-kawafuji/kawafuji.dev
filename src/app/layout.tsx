@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Rasa, Wendy_One } from 'next/font/google';
+import { Jost, Knewave } from 'next/font/google';
 import clsx from 'clsx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   description: "Masashi Kawafuji's blog",
 };
 
-const rasa = Rasa({
+const jost = Jost({
   subsets: ['latin'],
-  variable: '--font-family-serif',
+  variable: '--font-family-sans-seif',
 });
 
-const wendyOne = Wendy_One({
+const knewave = Knewave({
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-family-display',
+  variable: '--font-family-calligraphy',
 });
 
 export default function RootLayout({
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(styles.layout, rasa.variable, wendyOne.variable)}>
+      <body className={clsx(styles.layout, jost.variable, knewave.variable)}>
         <Header />
         {children}
         <Footer />
