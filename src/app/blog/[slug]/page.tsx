@@ -2,8 +2,8 @@ import path from 'node:path';
 import fg from 'fast-glob';
 import { getPost } from '@/lib/blog';
 import Container from '@/components/Container';
-import BlogHeader from '@/components/Blog/BlogHeader';
-import BlogContent from '@/components/Blog/BlogContent';
+import styles from './page.module.scss';
+import { format } from 'date-fns';
 
 export async function generateStaticParams() {
   const files = await fg('src/content/blog/*.md');
@@ -24,8 +24,15 @@ export default async function Blog({
     <main>
       <Container>
         <article>
-          <BlogHeader metadata={metadata} />
-          <BlogContent>{content}</BlogContent>
+          <header className={styles.header}>
+            <h1 className={styles.title}>{metadata.title}</h1>
+            <p className={styles.date}>
+              <time dateTime={metadata.date}>
+                {format(metadata.date, 'PPP')}
+              </time>
+            </p>
+          </header>
+          <section className={styles.content}>{content}</section>
         </article>
       </Container>
     </main>
