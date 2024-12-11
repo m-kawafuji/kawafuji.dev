@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.container}>
       <Container>
         <div className={styles.inner}>
           <ul className={styles.socialLinks}>
