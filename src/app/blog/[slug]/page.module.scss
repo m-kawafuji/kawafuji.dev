@@ -36,12 +36,6 @@
   p {
     font-weight: 500;
     margin-block: 1rem;
-
-    code {
-      background-color: #f7f1d2;
-      border-radius: 0.4em;
-      padding: 0.2em 0.4em;
-    }
   }
 
   a {
@@ -64,5 +58,13 @@
     max-width: calc(100vw - 2rem);
     overflow: auto;
     padding: 1rem;
+  }
+
+  :not(pre) {
+    code {
+      background-color: #f7f1d2;
+      border-radius: 0.4em;
+      padding: 0.2em 0.4em;
+    }
   }
 }
