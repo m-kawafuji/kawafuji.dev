@@ -31,17 +31,15 @@ export default function useMediaQuery(mediaQueryString: string) {
 For more details, read [the API reference](https://react.dev/reference/react/useSyncExternalStore).
 
 ```tsx
-import { useCallback, useRef, useSyncExternalStore } from 'react';
+import { useCallback, useSyncExternalStore } from 'react';
 
 export default function useMediaQuery(mediaQueryString: string) {
-  const mediaQueryListRef = useRef<MediaQueryList>();
-
   const subscribe = useCallback(
     (callback: () => void) => {
-      mediaQueryListRef.current = window.matchMedia(mediaQueryString);
-      mediaQueryListRef.current.addEventListener('change', callback);
+      const mediaQueryList = window.matchMedia(mediaQueryString);
+      mediaQueryList.addEventListener('change', callback);
       return () => {
-        mediaQueryListRef.current?.removeEventListener('change', callback);
+        mediaQueryList.removeEventListener('change', callback);
       };
     },
     [mediaQueryString],
@@ -49,7 +47,7 @@ export default function useMediaQuery(mediaQueryString: string) {
 
   return useSyncExternalStore(
     subscribe,
-    () => mediaQueryListRef.current && mediaQueryListRef.current.matches,
+    () => window.matchMedia(mediaQueryString).matches,
     () => undefined,
   );
 }
