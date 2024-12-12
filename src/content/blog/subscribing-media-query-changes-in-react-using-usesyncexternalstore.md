@@ -25,7 +25,7 @@ export default function useMediaQuery(mediaQueryString: string) {
 `useSyncExternalStore` accepts three arguments.
 
 - The first argument is the `subscribe` function that subscribes the external store changes. It accepts a callback as an argument that will be called when the store changes. In this case, a `MediaQueryList` object listens the `change` event invoked when the media query status of the document changes.
-- The second argument is the `getSnapshot` function that gets and returns the value as the `subscribe`'s callback is called. In this case, it returns the `boolean` value if the `mediaQueryString` matches.
+- The second argument is the `getSnapshot` function that sets the value returned from `useSyncExternalStore` and is called when the `subscribe` function's callback is invoked. In this case, it returns the `boolean` value whether the `mediaQueryString` matches or not.
 - The third argument is the `getServerSnapshot` function that returns the initial value to be set during the hydration and can be omitted if the components that use this hook are fully rendered on the client. In this case, `undefined` is returned since `window` is not available on the server.
 
 For more details, read [the API reference](https://react.dev/reference/react/useSyncExternalStore).
