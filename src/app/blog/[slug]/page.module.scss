@@ -61,7 +61,8 @@
   pre {
     border-radius: 0.5rem;
     margin-block: 1rem;
-    overflow: scroll;
+    max-width: calc(100vw - 2rem);
+    overflow: auto;
     padding: 1rem;
   }
 }
