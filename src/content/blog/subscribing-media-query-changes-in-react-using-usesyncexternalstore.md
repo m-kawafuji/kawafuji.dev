@@ -11,7 +11,7 @@ Since React 18, `useSyncExternalStore` is available to subscribe external stores
 
 ## Create useMediaQuery hook
 
-Assume that you're using TypeScript. `useMediaQuery` takes a media query string as an argument and returns a `boolean` value whether if a media query string matches and also returns `undefined` if `window` is not available.
+Assume that you're using TypeScript. `useMediaQuery` takes a media query string as an argument and returns a `boolean` value whether the media query string matches and also returns `undefined` if `window` is not available.
 
 ```typescript
 // useMediaQuery.ts
@@ -24,9 +24,9 @@ export default function useMediaQuery(mediaQueryString: string) {
 
 `useSyncExternalStore` accepts three arguments.
 
-- The first argument is the `subscribe` function that subscribes the external store changes. It accepts a callback as an argument that will be called when the store changes.
-- The second argument is the `getSnapshot` function that gets and returns the value as the `subscribe`'s callback is called.
-- The third argument is the `getServerSnapshot` function that returns the initial value to be set during the hydration and can be omitted if the components that use this hook are fully rendered on the client.
+- The first argument is the `subscribe` function that subscribes the external store changes. It accepts a callback as an argument that will be called when the store changes. In this case, a `MediaQueryList` object listens the `change` event the media query status of the document.
+- The second argument is the `getSnapshot` function that gets and returns the value as the `subscribe`'s callback is called. In this case, it returns the `boolean` value if the `mediaQueryString` matches.
+- The third argument is the `getServerSnapshot` function that returns the initial value to be set during the hydration and can be omitted if the components that use this hook are fully rendered on the client. In this case, `undefined` is returned since `window` is not available on the server.
 
 For more details, read [the API reference](https://react.dev/reference/react/useSyncExternalStore).
 
@@ -53,7 +53,7 @@ export default function useMediaQuery(mediaQueryString: string) {
 }
 ```
 
-Note that the `subscribe` function is wrapped by `useCallback` hook to prevent the unnecessary re-subscribing.
+Note that the `subscribe` function is wrapped by `useCallback` hook to prevent from re-subscribing unnecessarily.
 
 ## Conclusion
 
