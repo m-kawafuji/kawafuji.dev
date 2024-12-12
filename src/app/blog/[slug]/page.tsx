@@ -1,9 +1,37 @@
+import type { Metadata } from 'next';
+import { BASE_URL } from '@/constants';
 import path from 'node:path';
 import fg from 'fast-glob';
 import { getPost } from '@/lib/blog';
 import Container from '@/components/Container';
 import styles from './page.module.scss';
 import { format } from 'date-fns';
+
+type BlogPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: BlogPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const { metadata } = await getPost(`src/content/blog/${slug}.md`);
+  const url = new URL(`/blog/${slug}/`, BASE_URL).toString();
+
+  return {
+    title: metadata.title,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      url,
+      type: 'website',
+      siteName: 'Masashi Kawafuji',
+      title: 'Masashi Kawafuji',
+      description: "Masashi Kawafuji's blog",
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const files = await fg('src/content/blog/*.md');
@@ -12,11 +40,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Blog({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Blog({ params }: BlogPageProps) {
   const { slug } = await params;
   const { content, metadata } = await getPost(`src/content/blog/${slug}.md`);
 

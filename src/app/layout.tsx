@@ -8,7 +8,10 @@ import 'minireset.css';
 import '@/styles/index.scss';
 
 export const metadata: Metadata = {
-  title: 'Masashi Kawafuji',
+  title: {
+    template: '%s | Masashi Kawafuji',
+    default: 'Masashi Kawafuji',
+  },
   description: "Masashi Kawafuji's blog",
 };
 
