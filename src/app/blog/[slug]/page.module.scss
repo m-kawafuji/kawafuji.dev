@@ -19,6 +19,8 @@
 }
 
 .content {
+  font-weight: 500;
+
   h2 {
     font-size: 1.75rem;
     font-weight: 800;
@@ -34,8 +36,13 @@
   }
 
   p {
-    font-weight: 500;
     margin-block: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+    margin-block: 1rem;
+    padding-left: 1rem;
   }
 
   a {
