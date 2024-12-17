@@ -10,7 +10,7 @@
     "stylelint": "stylelint \"**/*.scss\"",
     "prettier": "prettier . --write",
     "prepare": "husky",
-    "deploy": "wrangler pages deploy out"
+    "deploy": "wrangler pages deploy"
   },
   "dependencies": {
     "@shikijs/rehype": "^1.22.2",
