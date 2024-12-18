@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { Jost, Knewave } from 'next/font/google';
 import clsx from 'clsx';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '@/components/Layout/Header';
+import Footer from '@/components/Layout/Footer';
 import styles from './layout.module.scss';
 import 'minireset.css';
 import '@/styles/index.scss';

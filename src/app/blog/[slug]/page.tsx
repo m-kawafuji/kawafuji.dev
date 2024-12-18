@@ -3,7 +3,7 @@ import { BASE_URL } from '@/constants';
 import path from 'node:path';
 import fg from 'fast-glob';
 import { getPost } from '@/lib/blog';
-import Container from '@/components/Container';
+import Container from '@/components/Common/Container';
 import FormattedDate from '@/components/Common/FormattedDate';
 import styles from './page.module.scss';
 

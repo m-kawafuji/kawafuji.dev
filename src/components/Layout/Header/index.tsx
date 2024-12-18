@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Container from '@/components/Container';
+import Container from '@/components/Common/Container';
 import styles from './index.module.scss';
 
 export default function Header() {

@@ -1,4 +1,4 @@
-import Container from '@/components/Container';
+import Container from '@/components/Common/Container';
 import styles from './index.module.scss';
 import github from './github.svg';
 import Image from 'next/image';

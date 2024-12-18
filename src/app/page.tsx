@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Container from '@/components/Container';
+import Container from '@/components/Common/Container';
 import Jumbotron from '@/components/Home/Jumbotron';
 import PostList from '@/components/Home/PostList';
 import { BASE_URL } from '@/constants';
