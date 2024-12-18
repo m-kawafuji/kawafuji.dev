@@ -4,8 +4,8 @@ import path from 'node:path';
 import fg from 'fast-glob';
 import { getPost } from '@/lib/blog';
 import Container from '@/components/Container';
+import FormattedDate from '@/components/Common/FormattedDate';
 import styles from './page.module.scss';
-import { format } from 'date-fns';
 
 type BlogPageProps = {
   params: Promise<{ slug: string }>;
@@ -51,9 +51,7 @@ export default async function Blog({ params }: BlogPageProps) {
           <header className={styles.header}>
             <h1 className={styles.title}>{metadata.title}</h1>
             <p className={styles.date}>
-              <time dateTime={metadata.date}>
-                {format(metadata.date, 'PPP')}
-              </time>
+              <FormattedDate date={metadata.date} />
             </p>
           </header>
           <section className={styles.content}>{content}</section>

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import fg from 'fast-glob';
-import { compareDesc, format } from 'date-fns';
+import { compareDesc } from 'date-fns';
 import { getPost } from '@/lib/blog';
+import FormattedDate from '@/components/Common/FormattedDate';
 import styles from './index.module.scss';
 
 export default async function PostList() {
@@ -20,9 +21,7 @@ export default async function PostList() {
             </Link>
           </h2>
           <p className={styles.date}>
-            <time dateTime={post.metadata.date}>
-              {format(post.metadata.date, 'PPP')}
-            </time>
+            <FormattedDate date={post.metadata.date} />
           </p>
         </article>
       ))}
