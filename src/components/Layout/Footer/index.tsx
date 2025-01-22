@@ -8,8 +8,8 @@ export default function Footer() {
     <footer className={styles.container}>
       <Container>
         <div className={styles.inner}>
-          <ul className={styles.socialLinks}>
-            <li className={styles.socialLinkWrapper}>
+          <ul className={styles.socials}>
+            <li className={styles.social}>
               <a
                 href="https://github.com/m-kawafuji"
                 target="_blank"

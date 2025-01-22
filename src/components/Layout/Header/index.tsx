@@ -7,7 +7,7 @@ export default function Header() {
     <header className={styles.container}>
       <Container>
         <div className={styles.inner}>
-          <Link href="/" className={styles.home}>
+          <Link href="/" className={styles.branding}>
             Masashi Kawafuji
           </Link>
         </div>
