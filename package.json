@@ -18,7 +18,7 @@
     "date-fns": "^4.1.0",
     "fast-glob": "^3.3.2",
     "minireset.css": "^0.0.7",
-    "next": "15.1.0",
+    "next": "15.1.6",
     "next-mdx-remote": "^5.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.2",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
     "eslint": "^8",
-    "eslint-config-next": "15.1.0",
+    "eslint-config-next": "15.1.6",
     "eslint-config-prettier": "^9.1.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
@@ -42,7 +42,7 @@
     "wrangler": "^3.95.0"
   },
   "overrides": {
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.2"
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3"
   }
 }
