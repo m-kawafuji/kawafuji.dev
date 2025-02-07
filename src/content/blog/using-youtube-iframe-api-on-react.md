@@ -161,3 +161,5 @@ export default function Home() {
 ```
 
 The example code is [here](https://github.com/m-kawafuji/youtube-iframe-player-api-demo/tree/main).
+
+For more information about IFrame API, please read [the API reference](https://developers.google.com/youtube/iframe_api_reference).
