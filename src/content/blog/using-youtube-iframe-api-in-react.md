@@ -3,11 +3,11 @@ title: Using YouTube IFrame API in React
 date: 2025-02-08
 ---
 
-As you know, videos on YouTube can be embedded on your websites. Furthermore, you can use IFrame API provided by YouTube to be gained granular controls for those videos, even on React projects.
+As you know, videos on YouTube can be embedded on your websites. Furthermore, you can use IFrame API provided by YouTube to be gained granular controls for those videos, even in React projects.
 
 ## Type Definitions for IFrame API
 
-Before get into React code, I'd highly recommend to set up TypeScript to safely use this API. Type Definitions for this API is available on [npm](https://www.npmjs.com/package/@types/youtube).
+Before get into the React code, I'd highly recommend to set up TypeScript to safely use this API. Type Definitions for this API is available on [npm](https://www.npmjs.com/package/@types/youtube).
 
 ```bash
 npm install --save-dev @types/youtube
