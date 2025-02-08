@@ -1,5 +1,5 @@
 ---
-title: Using YouTube IFrame API on React
+title: Using YouTube IFrame API in React
 date: 2025-02-08
 ---
 
@@ -21,9 +21,9 @@ To ensure that IFrame API code is loaded before player objects are created, you 
 
 There are two state variables called `isMounted` and `isApiReady`.
 
-The `onYouTubeIframeAPIReady` function is called when the IFrame API is ready to be used. `isApiReady` is set to `true` inside this function.
+The `onYouTubeIframeAPIReady` function is called when the IFrame API is ready to be used. The `isApiReady` is set to `true` inside this function.
 
-`isMounted` is set to `true` simultaneously with the definition of the `onYouTubeIframeAPIReady` function, because the API code expects that the `onYouTubeIframeAPIReady` function is defined in advance.
+The `isMounted` is set to `true` simultaneously with the definition of the `onYouTubeIframeAPIReady` function, because the API code expects that the `onYouTubeIframeAPIReady` function is defined in advance.
 
 The `YouTubeContext` can be a provider of itself in React 19.
 
