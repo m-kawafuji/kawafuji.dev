@@ -27,7 +27,7 @@ export async function generateMetadata({
       url,
       type: 'website',
       siteName: 'Masashi Kawafuji',
-      title: 'Masashi Kawafuji',
+      title: `${metadata.title} | Masashi Kawafuji`,
       description: "Masashi Kawafuji's blog",
     },
   };
