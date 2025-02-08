@@ -63,7 +63,7 @@ export function YouTubeProvider({ children }: { children: React.ReactNode }) {
 }
 ```
 
-Note that in React 19, the `<script>` can be placed everywhere in your app, and the `<script>` is shifted inside a `<head>`. React de-duplicates `<script>` elements if the `src` and the `async={true}` props are passed.
+Note that in React 19, the `<script>` can be located everywhere in your app, and the `<script>` will be shifted inside a `<head>`. React de-duplicates `<script>` elements if the `src` and the `async={true}` props are passed.
 
 ## The Player Component
 
