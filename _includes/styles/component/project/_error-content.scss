@@ -1,0 +1,14 @@
+.p-errorContent {
+  padding-block: 4rem;
+  text-align: center;
+}
+
+.p-errorContent__title {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.p-errorContent__description {
+  margin-top: 0.5rem;
+  color: var(--color-text-secondary);
+}
