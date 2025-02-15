@@ -1,4 +1,6 @@
 .p-teasers {
+  padding-block: 2rem;
+
   > * + * {
     margin-top: 2rem;
   }
