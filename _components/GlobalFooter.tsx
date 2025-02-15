@@ -3,7 +3,7 @@ export default function GlobalFooter() {
     <footer class="l-globalFooter">
       <div class="l-container">
         <div class="l-globalFooter__inner">
-          <ul class="l-globalFooter__socialLinks">
+          <ul class="l-globalFooter__socialLinks" role="list">
             <li class="l-globalFooter__socialLinkWrapper">
               <a
                 href="https://github.com/m-kawafuji"
