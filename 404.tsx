@@ -2,6 +2,10 @@ export const title = "Page Not Found";
 
 export const stylesheet = "/styles/404/index.css";
 
+export const metas: Lume.Data["metas"] = {
+  title: (data) => data.title + " | Masashi Kawafuji",
+};
+
 export default function NotFound() {
   return (
     <main>
