@@ -85,7 +85,7 @@ To control the playback of videos, the `playVideo` function and the `pauseVideo`
 function need to called in parent components of the `<YouTubePlayer>` component.
 One of approaches is making these functions are available via the `ref`.
 
-The `useImperativeHandle` hook is used to exposing the `playVideo` function and
+The `useImperativeHandle` hook is used to expose the `playVideo` function and
 the `pauseVideo` function outside the component. The `useImperativeHandle` hook
 can customize the `ref` object.
 
