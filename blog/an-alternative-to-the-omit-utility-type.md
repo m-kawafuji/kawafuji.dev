@@ -1,5 +1,6 @@
 ---
 title: An Alternative to the Omit Utility Type
+date: 2025-03-15
 ---
 
 TypeScript provides sevral utility types. We can efficiently construct new types with them. `Omit<Type, Keys>` is one of them to remove specific properties from object types.

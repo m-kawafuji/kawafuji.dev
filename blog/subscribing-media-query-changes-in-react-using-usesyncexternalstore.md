@@ -1,5 +1,6 @@
 ---
 title: Subscribing Media Query Changes in React using useSyncExternalStore
+date: 2024-12-12
 ---
 
 In this post, I walk you through how to subscribe a media query change in React

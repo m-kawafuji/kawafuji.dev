@@ -1,5 +1,5 @@
 import lume from "lume/mod.ts";
-import jsx from "lume/plugins/jsx_preact.ts";
+import jsx from "lume/plugins/jsx.ts";
 import sass from "lume/plugins/sass.ts";
 import metas from "lume/plugins/metas.ts";
 import Shiki from "@shikijs/markdown-it";
@@ -16,10 +16,11 @@ const site = lume({
   },
 });
 
+site.add("static", ".");
+site.add([".scss"]);
+
 site.use(jsx());
 site.use(sass());
 site.use(metas());
-
-site.copy("static", ".");
 
 export default site;

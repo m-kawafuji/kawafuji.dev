@@ -1,9 +1,9 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.5.1/",
-    "preact": "npm:preact@10.25.4",
+    "lume/": "https://deno.land/x/lume@v3.0.2/",
     "date-fns": "npm:date-fns@4.1.0",
-    "@shikijs/markdown-it": "npm:@shikijs/markdown-it@2.3.2"
+    "@shikijs/markdown-it": "npm:@shikijs/markdown-it@2.3.2",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
   },
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
@@ -12,9 +12,17 @@
   },
   "compilerOptions": {
     "jsx": "precompile",
-    "jsxImportSource": "preact",
+    "jsxImportSource": "lume",
     "types": [
       "lume/types.ts"
+    ]
+  },
+  "unstable": [
+    "temporal"
+  ],
+  "lint": {
+    "plugins": [
+      "https://deno.land/x/lume@v3.0.2/lint.ts"
     ]
   }
 }
