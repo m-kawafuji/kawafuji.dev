@@ -48,11 +48,12 @@
     }
 
     a {
+        text-decoration-line: underline;
+
       @media (any-hover: hover) {
         transition-property: opacity;
         transition-timing-function: var(--ease-out);
         transition-duration: var(--default-transition-duration);
-        text-decoration-line: underline;
 
         &:hover {
           opacity: 0.7;

@@ -21,7 +21,7 @@ export default function Home({ comp, search }: Lume.Data) {
           </p>
         </section>
 
-        <div class="flex flex-col gap-8 py-8">
+        <div class="flex flex-col gap-8 pt-8 pb-16">
           {posts.map((post) => (
             <article>
               <h2 class="text-2xl font-extrabold leading-[1.25]">
