@@ -1,9 +1,5 @@
-interface GlobalLayoutData {
-  stylesheet: string;
-}
-
 export default function GlobalLayout(
-  { children, comp, url, stylesheet, title }: GlobalLayoutData & Lume.Data,
+  { children, comp, url, title }: Lume.Data,
 ) {
   if (url !== "/") {
     title += " | Masashi Kawafuji";
@@ -21,7 +17,7 @@ export default function GlobalLayout(
           />
           <title>{title}</title>
           <link rel="icon" href="/favicon.ico" />
-          <link rel="stylesheet" href={stylesheet} />
+          <link rel="stylesheet" href="/styles.css" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
@@ -33,7 +29,7 @@ export default function GlobalLayout(
             rel="stylesheet"
           />
         </head>
-        <body class="l-globalLayout">
+        <body class="grid grid-rows-[auto_1fr_auto]">
           <comp.GlobalHeader />
           {children}
           <comp.GlobalFooter />

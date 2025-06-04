@@ -1,22 +1,20 @@
 export const title = "Page Not Found";
 
-export const stylesheet = "/styles/404/index.css";
-
 export const metas: Lume.Data["metas"] = {
   title: (data) => data.title + " | Masashi Kawafuji",
 };
 
-export default function NotFound() {
+export default function NotFound({ comp }: Lume.Data) {
   return (
     <main>
-      <div class="l-container">
-        <section class="p-errorContent">
-          <h1 class="p-errorContent__title">Page Not Found</h1>
-          <p class="p-errorContent__description">
+      <comp.Container>
+        <section class="py-16 text-center">
+          <h1 class="text-3xl font-extrabold">Page Not Found</h1>
+          <p class="mt-2 text-gray-600">
             The requested page was not found.
           </p>
         </section>
-      </div>
+      </comp.Container>
     </main>
   );
 }

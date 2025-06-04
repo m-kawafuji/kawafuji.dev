@@ -1,13 +1,18 @@
+import Container from "./Container.tsx";
+
 export default function GlobalHeader() {
   return (
-    <header class="l-globalHeader">
-      <div class="l-container">
-        <div class="l-globalHeader__inner">
-          <a href="/" class="l-globalHeader__branding">
+    <header class="border-b border-gray-300">
+      <Container>
+        <div class="py-4">
+          <a
+            href="/"
+            class="text-xl font-calligraphy transition-opacity ease-out hover:opacity-70"
+          >
             Masashi Kawafuji
           </a>
         </div>
-      </div>
+      </Container>
     </header>
   );
 }
