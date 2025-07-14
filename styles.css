@@ -48,7 +48,7 @@
     }
 
     a {
-        text-decoration-line: underline;
+      text-decoration-line: underline;
 
       @media (any-hover: hover) {
         transition-property: opacity;
