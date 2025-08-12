@@ -5,9 +5,9 @@ export default function BlogLayout({ children, comp, date, title }: Lume.Data) {
     <main>
       <comp.Container>
         <article class="py-8">
-          <header class="pb-4 border-b border-gray-300">
-            <h1 class="text-3xl font-extrabold leading-[1.25]">{title}</h1>
-            <p class="mt-2 text-gray-600">
+          <header class="pb-4 border-b border-gray-400">
+            <h1 class="text-3xl font-extrabold">{title}</h1>
+            <p class="mt-2">
               <comp.Time datetime={date} />
             </p>
           </header>

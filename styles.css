@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Jost", serif;
+  --font-sans: "Lato", sans-serif;
   --font-mono:
     ui-monospace, sfmono-regular, consolas, "Liberation Mono", menlo, monospace;
-  --font-calligraphy: "Knewave", serif;
+  --font-brand: "Sonsie One", system-ui;
 }
 
 @layer base {
@@ -13,26 +13,24 @@
   }
 
   body {
-    color: var(--color-green-950);
-    background-color: var(--color-yellow-50);
+    color: var(--color-white);
+    background-color: var(--color-gray-950);
     min-height: 100%;
   }
 }
 
 @layer components {
   .post-content {
-    font-weight: var(--font-weight-medium);
-
     h2 {
       margin-top: calc(var(--spacing) * 10);
-      font-size: 1.75rem;
-      font-weight: var(--font-weight-extrabold);
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-bold);
       line-height: 1.25;
     }
 
     h3 {
       margin-top: calc(var(--spacing) * 8);
-      font-size: var(--text-2xl);
+      font-size: var(--text-xl);
       font-weight: var(--font-weight-bold);
       line-height: 1.25;
     }
@@ -48,15 +46,11 @@
     }
 
     a {
-      text-decoration-line: underline;
+      color: #ffdd6e;
 
       @media (any-hover: hover) {
-        transition-property: opacity;
-        transition-timing-function: var(--ease-out);
-        transition-duration: var(--default-transition-duration);
-
         &:hover {
-          opacity: 0.7;
+          text-decoration-line: underline;
         }
       }
     }
@@ -75,7 +69,7 @@
 
     :not(pre) {
       > code {
-        background-color: #f7f1d2;
+        background-color: var(--color-gray-800);
         border-radius: var(--radius-sm);
         padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.25);
       }

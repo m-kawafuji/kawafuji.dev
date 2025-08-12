@@ -10,7 +10,7 @@ const site = lume({
   markdown: {
     plugins: [
       await Shiki({
-        theme: "github-dark-high-contrast",
+        theme: "github-dark",
       }),
     ],
   },

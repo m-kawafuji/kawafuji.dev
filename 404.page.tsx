@@ -10,7 +10,7 @@ export default function NotFound({ comp }: Lume.Data) {
       <comp.Container>
         <section class="py-16 text-center">
           <h1 class="text-3xl font-extrabold">Page Not Found</h1>
-          <p class="mt-2 text-gray-600">
+          <p class="mt-2 text-gray-400">
             The requested page was not found.
           </p>
         </section>

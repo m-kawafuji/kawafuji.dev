@@ -2,7 +2,7 @@ import Container from "./Container.tsx";
 
 export default function GlobalFooter() {
   return (
-    <footer class="border-t border-gray-300">
+    <footer>
       <Container>
         <div class="py-4">
           <ul class="flex justify-center" role="list">

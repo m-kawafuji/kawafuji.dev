@@ -25,7 +25,7 @@ export default function GlobalLayout(
             crossorigin="anonymous"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Knewave&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sonsie+One&display=swap"
             rel="stylesheet"
           />
         </head>
