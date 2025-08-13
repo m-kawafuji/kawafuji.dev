@@ -27,14 +27,14 @@ export default function Home({ comp, search }: Lume.Data) {
           <div class="grid md:grid-cols-2 gap-6 mt-8">
             {posts.map((post) => (
               <article class="relative p-8">
-                <h2 class="text-xl font-bold">
+                <h3 class="text-xl font-bold">
                   <a
                     href={post.url}
                     class="hover:underline before:absolute before:inset-0"
                   >
                     {post.title}
                   </a>
-                </h2>
+                </h3>
                 <p class="mt-4 text-sm">
                   <comp.Time datetime={post.date} />
                 </p>
