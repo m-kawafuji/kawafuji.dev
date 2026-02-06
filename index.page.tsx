@@ -24,7 +24,7 @@ export default function Home({ comp, search }: Lume.Data) {
           <h2 class="w-fit mx-auto font-brand text-4xl text-center">
             Posts
           </h2>
-          <div class="grid md:grid-cols-2 gap-6 mt-8">
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-6 mt-8">
             {posts.map((post) => (
               <article class="relative p-8">
                 <h3 class="text-xl font-bold">
