@@ -22,6 +22,7 @@
 @layer components {
   .post-content {
     h2 {
+      overflow-wrap: anywhere;
       margin-top: calc(var(--spacing) * 10);
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-bold);
@@ -29,6 +30,7 @@
     }
 
     h3 {
+      overflow-wrap: anywhere;
       margin-top: calc(var(--spacing) * 8);
       font-size: var(--text-xl);
       font-weight: var(--font-weight-bold);

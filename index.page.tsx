@@ -11,7 +11,7 @@ export default function Home({ comp, search }: Lume.Data) {
     <main>
       <comp.Container>
         <section class="py-8 text-center">
-          <h1 class="py-16 text-5xl text-[#ffdd6e] text-shadow-[0.08em_0.08em_rgb(225_15_19/80%)] font-brand bg-radial-[closest-side,rgb(255_255_255/25%),rgb(115_115_255/0%)]">
+          <h1 class="py-16 text-5xl text-[#ffdd6e] text-shadow-[0.08em_0.08em_rgb(225_15_19/80%)] font-brand bg-radial-[closest-side,rgb(255_255_255/25%),rgb(115_115_255/0%)] wrap-anywhere">
             Masashi Kawafuji
           </h1>
           <p class="-mt-4">
@@ -24,13 +24,13 @@ export default function Home({ comp, search }: Lume.Data) {
           <h2 class="w-fit mx-auto font-brand text-4xl text-center">
             Posts
           </h2>
-          <div class="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-6 mt-8">
+          <div class="grid grid-cols-[repeat(auto-fit,minmax(min(20rem,100%),1fr))] gap-6 mt-8">
             {posts.map((post) => (
               <article class="relative p-8">
                 <h3 class="text-xl font-bold">
                   <a
                     href={post.url}
-                    class="hover:underline before:absolute before:inset-0"
+                    class="wrap-anywhere hover:underline before:absolute before:inset-0"
                   >
                     {post.title}
                   </a>
