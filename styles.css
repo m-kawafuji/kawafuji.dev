@@ -3,7 +3,12 @@
 @theme {
   --font-sans: "Lato", sans-serif;
   --font-mono:
-    ui-monospace, sfmono-regular, consolas, "Liberation Mono", menlo, monospace;
+    ui-monospace,
+    sfmono-regular,
+    consolas,
+    "Liberation Mono",
+    menlo,
+    monospace;
   --font-brand: "Sonsie One", system-ui;
 }
 
