@@ -1,8 +1,10 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 import GlobalFooter from "../components/GlobalFooter.astro";
-import GlobalHeader from "../components/GlobalHeader.astro";
 
 import "../styles/global.css";
+import GlobalHeader from "../components/GlobalHeader.astro";
 
 interface Props {
   title: string;
@@ -30,6 +32,7 @@ if (Astro.url.pathname !== "/") {
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sonsie+One&display=swap"
       rel="stylesheet"
     />
+    <ClientRouter />
   </head>
   <body class="grid grid-rows-[auto_1fr_auto]">
     <GlobalHeader />
@@ -37,3 +40,27 @@ if (Astro.url.pathname !== "/") {
     <GlobalFooter />
   </body>
 </html>
+
+<style is:global>
+  @keyframes slide-up {
+    0% {
+      opacity: 1;
+      translate: 0 0;
+    }
+    100% {
+      opacity: 0;
+      translate: 0 10%;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      opacity: 1;
+      translate: 0 0;
+    }
+    100% {
+      opacity: 0;
+      translate: 0 -10%;
+    }
+  }
+</style>
