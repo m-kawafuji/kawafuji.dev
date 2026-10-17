@@ -18,6 +18,7 @@
     "@astrojs/compiler-rs": "^0.5.1",
     "@tailwindcss/vite": "^4.3.3",
     "oxfmt": "^0.73.0",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3"
   },
   "engines": {
