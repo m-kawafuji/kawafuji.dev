@@ -1,0 +1,37 @@
+---
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+
+import Container from "../../components/Container.astro";
+import Time from "../../components/Time.astro";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+
+export async function getStaticPaths() {
+  const blogCollection = await getCollection("blog");
+  return blogCollection.map((blogEntry) => ({
+    params: { id: blogEntry.id },
+    props: { blogEntry },
+  }));
+}
+
+const { blogEntry } = Astro.props;
+const { Content } = await render(blogEntry);
+---
+
+<GlobalLayout title={blogEntry.data.title} description="Masashi Kawafuji's blog">
+  <main>
+    <Container>
+      <article class="py-8">
+        <header class="border-b border-gray-400 pb-4">
+          <h1 class="text-3xl font-extrabold wrap-anywhere">{blogEntry.data.title}</h1>
+          <p class="mt-2">
+            <Time datetime={blogEntry.data.date} />
+          </p>
+        </header>
+        <section class="post-content">
+          <Content />
+        </section>
+      </article>
+    </Container>
+  </main>
+</GlobalLayout>
