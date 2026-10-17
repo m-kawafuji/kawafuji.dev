@@ -1,0 +1,27 @@
+{
+  "name": "kawafuji.dev",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "dependencies": {
+    "astro": "^7.3.8",
+    "date-fns": "^4.4.0"
+  },
+  "devDependencies": {
+    "@astrojs/compiler-rs": "^0.5.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "oxfmt": "^0.73.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

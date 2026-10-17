@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+import Time from "./Time.astro";
+
+interface Props {
+  blogEntry: CollectionEntry<"blog">;
+}
+
+const { blogEntry } = Astro.props;
+---
+
+<article class="relative p-8">
+  <h3 class="text-xl font-bold">
+    <a
+      href={`/blog/${blogEntry.id}/`}
+      class="wrap-anywhere before:absolute before:inset-0 hover:underline"
+    >
+      {blogEntry.data.title}
+    </a>
+  </h3>
+  <p class="mt-4 text-sm">
+    <Time datetime={blogEntry.data.date} />
+  </p>
+  <div class="pointer-events-none absolute inset-x-[5px] inset-y-0 border-x border-y-2 border-gray-400" />
+  <div class="pointer-events-none absolute inset-x-0 inset-y-[5px] border-x-2 border-y border-gray-400" />
+</article>

@@ -1,0 +1,11 @@
+---
+import { format, formatISO } from "date-fns";
+
+interface Props {
+  datetime: string | Date;
+}
+
+const { datetime } = Astro.props;
+---
+
+<time datetime={formatISO(datetime, { representation: "date" })}>{format(datetime, "PPP")}</time>

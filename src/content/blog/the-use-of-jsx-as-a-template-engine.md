@@ -53,7 +53,7 @@ In JSX
 `,
     }}
   />
-</main>;
+</main>
 ```
 
 ## SSX
@@ -67,7 +67,7 @@ markup and no extra `<div>`s are required!
 <main>
   {{ __html: "<!-- HTML comments -->" }}
   {{ __html: '<!--#include virtual="/included.shtml"-->' }}
-</main>;
+</main>
 ```
 
 ## How about template engines?
