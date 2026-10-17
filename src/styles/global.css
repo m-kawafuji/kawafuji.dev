@@ -1,1 +1,77 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", sans-serif;
+  --font-mono: ui-monospace, sfmono-regular, consolas, "Liberation Mono", menlo, monospace;
+  --font-brand: "Sonsie One", system-ui;
+}
+
+@layer base {
+  html {
+    height: 100%;
+  }
+
+  body {
+    color: var(--color-white);
+    background-color: var(--color-gray-950);
+    min-height: 100%;
+  }
+}
+
+@layer components {
+  .post-content {
+    h2 {
+      overflow-wrap: anywhere;
+      margin-top: calc(var(--spacing) * 10);
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.25;
+    }
+
+    h3 {
+      overflow-wrap: anywhere;
+      margin-top: calc(var(--spacing) * 8);
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.25;
+    }
+
+    p {
+      margin-block: calc(var(--spacing) * 4);
+    }
+
+    ul {
+      margin-block: calc(var(--spacing) * 4);
+      padding-left: calc(var(--spacing) * 4);
+      list-style-type: disc;
+    }
+
+    a {
+      color: #ffdd6e;
+
+      @variant hover {
+        text-decoration-line: underline;
+      }
+    }
+
+    :is(code, pre) {
+      font-size: var(--text-xs);
+    }
+
+    pre {
+      border-radius: var(--radius-lg);
+      margin-block: calc(var(--spacing) * 4);
+      max-width: calc(100vw - var(--spacing) * 8);
+      overflow: auto;
+      padding: calc(var(--spacing) * 4);
+    }
+
+    :not(pre) {
+      > code {
+        background-color: var(--color-gray-800);
+        border-radius: var(--radius-sm);
+        padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.25);
+      }
+    }
+  }
+}
